@@ -1,0 +1,95 @@
+.buttonn {
+    -fx-background-color: black;
+    /* Fond noir */
+    -fx-text-fill: rgb(92, 163, 218);
+    /* Texte vert */
+    -fx-font-size: 14px;
+    /* Taille du texte */
+    -fx-font-weight: bold;
+    /* Texte en gras */
+    -fx-background-radius: 5px;
+    /* Coins arrondis */
+    -fx-border-radius: 5px;
+    /* Bord arrondi pour la bordure */
+    -fx-border-color: rgb(54, 94, 181);
+    /* Bordure verte */
+    -fx-border-width: 2px;
+    /* Épaisseur de la bordure */
+    -fx-cursor: hand;
+    /* Curseur en forme de main au survol */
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 255, 0, 0.2), 5, 0, 0, 0);
+    /* Ombre légère */
+    -fx-width: auto
+}
+
+#usingApi {
+    fx-text-fill: rgb(92, 163, 218);
+    /* Texte vert */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.buttonn:hover {
+    -fx-background-color: rgb(115, 125, 124);
+    /* Fond légèrement plus clair au survol */
+    -fx-border-color: rgb(92, 163, 218);
+}
+
+
+
+
+#applicationName {
+    -fx-background-color: black;
+    -fx-text-fill: rgb(5, 75, 227);
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+}
+
+#xmlTexte {
+    -fx-background-color: white;
+    /* Fond noir */
+    -fx-text-fill: rgb(92, 163, 218);
+    /* Texte vert */
+    -fx-font-size: 14px;
+    /* Taille du texte */
+    -fx-font-weight: bold;
+    /* Texte en gras */
+    -fx-padding: 5px 10px;
+    /* Espacement interne */
+    -fx-background-radius: 5px;
+    /* Coins arrondis */
+    -fx-border-radius: 5px;
+    /* Bord arrondi pour la bordure */
+    -fx-border-color: rgb(54, 94, 181);
+    /* Bordure verte */
+    -fx-border-width: 2px;
+}
+
+#xmlTexte:hover {
+    -fx-border-color: rgb(92, 163, 218);
+}
+
+#jsonTexte {
+    -fx-background-color: white;
+    /* Fond noir */
+    -fx-text-fill: rgb(92, 163, 218);
+    /* Texte vert */
+    -fx-font-size: 14px;
+    /* Taille du texte */
+    -fx-font-weight: bold;
+    /* Texte en gras */
+    -fx-padding: 5px 10px;
+    /* Espacement interne */
+    -fx-background-radius: 5px;
+    /* Coins arrondis */
+    -fx-border-radius: 5px;
+    /* Bord arrondi pour la bordure */
+    -fx-border-color: rgb(54, 94, 181);
+    /* Bordure verte */
+    -fx-border-width: 2px;
+}
+
+#jsonTexte:hover {
+    -fx-border-color: rgb(92, 163, 218);
+}
