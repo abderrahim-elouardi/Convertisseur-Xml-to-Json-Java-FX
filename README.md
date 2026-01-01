@@ -1,5 +1,12 @@
 # Convertisseur-Xml-to-Json-Java-FX
 
+## 📽️ Présentation du projet
+
+Vous pouvez consulter la présentation du projet via le lien suivant :
+
+👉 https://drive.google.com/file/d/1XtFaqOn2F_fW77A_4w6GkpwBe29-1J3w/view?usp=sharing
+
+
 ## 🇫🇷 Français
 ### Description
 J'ai développé une application **JavaFX** dédiée à la conversion bidirectionnelle entre les formats **XML** et **JSON**. Ce projet met l'accent sur la flexibilité du traitement de données en offrant deux modes distincts à l'utilisateur.
