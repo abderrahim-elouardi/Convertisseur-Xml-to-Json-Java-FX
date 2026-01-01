@@ -25,8 +25,7 @@ public class MainXmlToJson extends Application {
     @Override
     public void start(Stage primaryStage) throws IOException {
         
-        Parent root = FXMLLoader.load(getClass().getResource("principall.fxml"));
-        
+        Parent root = FXMLLoader.load(getClass().getResource("MainStructure.fxml"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("style.css").toExternalForm());
         primaryStage.setTitle("XmlToJson");

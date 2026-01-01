@@ -6,6 +6,7 @@ package MainPackage;
 
 import UsingApi.ConvertisseurJsonXmlUsingJsonApi;
 import UsingApi.ConvertisseurXmlJsonUsingJsonApi;
+import WithoutApi.ConvertisseurJsonXmlWithoutApi;
 import WithoutApi.ConvertisseurXmlJsonWithoutApi;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -70,9 +71,7 @@ public class MainController {
         fileChooser.setInitialDirectory(new File(System.getProperty("user.home")));
 
 //        // Optionnel : filtrer les types de fichiers
-//        fileChooser.getExtensionFilters().addAll(
-//            new FileChooser.ExtensionFilter("Xml or Json File", "*.json"),
-//            new FileChooser.ExtensionFilter("Xml or Json File", "*.xml"));
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("XML & JSON (*.xml, *.json)", "*.xml", "*.json"));
 
         this.f = fileChooser.showOpenDialog(btnChooseFile.getScene().getWindow());
         afterChoosingFile();
@@ -104,8 +103,9 @@ public class MainController {
         }
         else{
             String xmltexte = this.xmlTexte.getText();
-            ConvertisseurXmlJsonWithoutApi cxjwa = new ConvertisseurXmlJsonWithoutApi(xmltexte);
-            this.jsonTexte.setText(cxjwa.toJson(xmltexte));
+            ConvertisseurXmlJsonWithoutApi cxjwa = new ConvertisseurXmlJsonWithoutApi(this.f);
+            System.out.println(cxjwa.toJson());
+            this.jsonTexte.setText(cxjwa.toJson());
         }
         this.choix=0;
     }
@@ -115,8 +115,13 @@ public class MainController {
     @FXML
     private void handelToXmlBtn(ActionEvent event) throws IOException {
         String jsonexte = this.jsonTexte.getText();
-        ConvertisseurJsonXmlUsingJsonApi cxjwa = new ConvertisseurJsonXmlUsingJsonApi(jsonexte);
-        this.xmlTexte.setText(cxjwa.toXml());
+//        if(this.usingApi.isSelected()){
+            ConvertisseurJsonXmlUsingJsonApi cxjwa = new ConvertisseurJsonXmlUsingJsonApi(jsonexte);
+            this.xmlTexte.setText(cxjwa.toXml());
+//        }else{
+//            ConvertisseurJsonXmlWithoutApi cxjwa = new ConvertisseurJsonXmlWithoutApi(jsonexte);
+//            this.xmlTexte.setText(cxjwa.toXml());
+//        }
         this.choix=1;
     }
 

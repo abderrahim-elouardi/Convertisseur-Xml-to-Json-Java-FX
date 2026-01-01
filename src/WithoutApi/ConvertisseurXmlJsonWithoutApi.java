@@ -8,23 +8,23 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
+import org.json.JSONObject;
 
 
 // on va utiliser l'api org.json (JSON-Java) pour convertir xml vers json
 public class ConvertisseurXmlJsonWithoutApi {
     public File f;
     public String textXml = "";
-
+    public ConvertisseurXmlJsonWithoutApi(String textXml){
+        this.textXml = textXml;
+    }
+    
     public ConvertisseurXmlJsonWithoutApi(File f) {
         this.f = f;
     }
-    
-    public ConvertisseurXmlJsonWithoutApi(String textXml) {
-//        this.f = f;
-        this.textXml = textXml;
-    }
 
-    private List<String> traiterTexte(String xmlText) throws IOException {
+    private List<String> traiterTexte() throws IOException {
+        String xmlText =this.getTexte();
 
         List<String> xmlTextProcessed = Arrays.stream(xmlText.split("<|>")).filter(s -> !s.equals("\n")).filter(s->!s.equals("")).filter(s->!s.equals("\t\t\t\t")).collect(Collectors.toList());
         xmlTextProcessed.removeIf(s->s.equals("?xml version=\"1.0\" encoding=\"UTF-8\"?"));
@@ -66,8 +66,8 @@ public class ConvertisseurXmlJsonWithoutApi {
         return sb.toString();
     }
 
-    public String toJson(String xmlText) throws IOException {
-        List<String> ll = traiterTexte(xmlText);
+    public String toJson() throws IOException {
+        List<String> ll = traiterTexte();
 
         String jsonText ="{";
         for(int i=0;i<ll.size();) {
