@@ -6,20 +6,14 @@ package MainPackage;
 
 import UsingApi.ConvertisseurJsonXmlUsingJsonApi;
 import UsingApi.ConvertisseurXmlJsonUsingJsonApi;
-import WithoutApi.ConvertisseurJsonXmlWithoutApi;
 import WithoutApi.ConvertisseurXmlJsonWithoutApi;
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.Reader;
 import java.util.Iterator;
 import java.util.List;
 import javafx.event.ActionEvent;
@@ -104,7 +98,6 @@ public class MainController {
         else{
             String xmltexte = this.xmlTexte.getText();
             ConvertisseurXmlJsonWithoutApi cxjwa = new ConvertisseurXmlJsonWithoutApi(this.f);
-            System.out.println(cxjwa.toJson());
             this.jsonTexte.setText(cxjwa.toJson());
         }
         this.choix=0;

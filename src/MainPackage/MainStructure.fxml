@@ -15,8 +15,8 @@
       <Button fx:id="btnSaveXml" layoutX="48.0" layoutY="440.0" mnemonicParsing="false" onAction="#handelbtnSaveXml" prefHeight="25.0" prefWidth="159.0" styleClass="buttonn" text="Save Xml Text" />
       <Button fx:id="btnToJson" layoutX="370.0" layoutY="205.0" mnemonicParsing="false" onAction="#handelToJsonBtn" styleClass="buttonn" text="To Json -&gt;" />
       <Button fx:id="btnToXml" layoutX="370.0" layoutY="283.0" mnemonicParsing="false" onAction="#handelToXmlBtn" styleClass="buttonn" text="&lt;- To Xml " />
-      <CheckBox fx:id="usingApi" layoutX="377.0" layoutY="160.0" mnemonicParsing="false" text="Using api" />
+      <CheckBox fx:id="usingApi" layoutX="377.0" layoutY="160.0" mnemonicParsing="false" text="Using Json.jar" />
       <Button fx:id="btnSaveJson" layoutX="616.0" layoutY="443.0" mnemonicParsing="false" onAction="#handelbtnSaveJson" prefHeight="25.0" prefWidth="159.0" styleClass="buttonn" text="Save Json Text" />
-      <Button fx:id="btnRefresh" layoutX="538.0" layoutY="70.0" mnemonicParsing="false" onAction="#handelbtnRefreshBtn" prefHeight="25.0" prefWidth="249.0" styleClass="buttonn" text="Refresh" />
+      <Button fx:id="btnRefresh" layoutX="538.0" layoutY="70.0" mnemonicParsing="false" onAction="#handelbtnRefreshBtn" prefHeight="25.0" prefWidth="249.0" styleClass="buttonn" text="Clean " />
    </children>
 </AnchorPane>
